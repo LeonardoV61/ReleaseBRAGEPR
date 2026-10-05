@@ -35,6 +35,14 @@
 </html>
 <script>
 function abrir() {
-    window.location.href='pg001.html';
+    var usuario = document.getElementById('usr').value.trim();
+
+    if (usuario === "") {
+        window.location.href = 'msg.html';
+    } else if (usuario === "admin") {
+        window.location.href = 'pg001.html';
+    } else {
+        window.location.href = 'pg002.html';
+    }
 }
 </script>
